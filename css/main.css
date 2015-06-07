@@ -1,0 +1,92 @@
+h1 {
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: xx-large;
+    text-align: right;
+    margin: 30px 0 5px 0;
+    color: #747704
+}
+
+h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: small;
+    text-align: right;
+    color: #747704;
+    margin: 0 0 5px 0;
+}
+
+.top-header {
+    padding: 5px 0 0 0;
+}
+
+.logo .col-xs-3,
+.logo .col-md-6 {
+    padding-left: 0;
+}
+
+.name {
+    padding-right: 0;
+}
+
+header {
+    padding: 5px 0 0 5px;
+    border-bottom: 4px solid #BCBBBB;
+    margin-bottom: 10px;
+}
+
+.feature-header {
+    font-size: large;
+    font-weight: 300;
+    margin: 10px 0 0 10px;
+    color: #BCBBBB;
+    border-bottom: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.project-name {
+    font-size: x-large;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    color: #747704;
+}
+
+.project-url {
+    font-weight: 100;
+    text-align: center;
+    text-transform: none;
+    display: block;
+    font-size: small;
+    padding-bottom: 10px;
+}
+
+.project span {
+    display: block;
+    text-align: center;
+}
+
+.container-fluid {
+    max-width: 960px;
+}
+
+.container {
+    max-width: 960px;
+}
+
+
+
+@media only screen and (min-width: 992px) {
+    .project {
+        padding: 10px 10px 15px 0;
+    }
+}
+
+
+
+@media only screen and (max-width: 400px) {
+    .container {
+        max-width: 350px;
+    }
+}
