@@ -1,7 +1,7 @@
 /* Header */
 header {
     padding: 5px 0 0 5px;
-    border-bottom: 4px solid #BCBBBB;
+    border-bottom: 4px solid #bcbbbb;
     margin-bottom: 10px;
 }
 
@@ -57,7 +57,7 @@ body {
     border-bottom: none;
     margin: 5px 0 0 0;
     padding: 0;
-    color: #BCBBBB;
+    color: #bcbbbb;
 }
 
 .project {
