@@ -5,62 +5,91 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes" />
     <title>Portfolio</title>
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" />
-
     <!-- Main styles -->
     <link rel="stylesheet" href="css/main.css" />
-    
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,100' rel='stylesheet' type='text/css'>
 
+    <!-- Styles for xs (< 641 px) devices -->
+    <link rel="stylesheet" media="screen and (max-width: 640px)" href="css/screen_layout_xs.css" />
+
+    <!-- Lato font -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,200,100' rel='stylesheet' type='text/css'>
 
 </head>
 
 <body>
-    <div class="container">
+    <section class="container">
         <header class="top-header row">
             <div class="logo">
+
+                <!-- Use only 3 columns on xs devices to allow more space for the name elements -->
                 <div class="col-xs-3 col-sm-6">
-                    <img src="http://placekitten.com/g/84/84" alt="logo">
+                    <a href="http://www.udacity.com">
+                        <img src="images_src/fixed/udacity_logo.png" alt="logo">
+                    </a>
                 </div>
             </div>
+
+            <!-- Allow the name elements to use 9 columns on xs devices to prevent text wrapping -->
             <div class="name col-xs-9 col-sm-6">
                 <h1>Tom Belunis</h1>
                 <h3>Web Developer</h3>
             </div>
         </header>
-    </div>
-        <section class="container">
+    </section>
+        <div class="container">
             <div class="row">
-                <img src="http://placekitten.com/g/1024/360" class="img-responsive img-main" alt="main work">
+                <!-- Use srcset to deliver higher resolution images to 2x(retina) devices -->
+                <img src="images/code.jpg"
+                     class="img-responsive img-main"
+                     srcset="images/code.jpg 1x,
+                             images/code_2x.jpg 2x"
+                     alt="main work">
             </div>
-        </section>
+        </div>
+    <div class="container">
         <section class="featured">
-            <div class="container">
-                <header class="feature-header">Featured Work</header>
-                <div class="row">
-                    <div class="project col-sm-6 col-md-4">
-                        <img src="http://placehold.it/300x200" class="center-block" alt="Appify project">
-                        <span class="project-name">Appify</span>
-                        <a class="project-url" href="#">https://github.com/udacity/Appify</a>
-                    </div>
-                    <div class="project col-sm-6 col-md-4">
-                        <img src="http://placehold.it/300x200" class="center-block" alt="Sunflower project">
-                        <span class="project-name">Sunflower</span>
-                        <a class="project-url" href="#">https://github.com/udacity/Sunflower</a>
-                    </div>
-                    <div class="project col-sm-6 col-md-4">
-                        <img src="http://placehold.it/300x200" class="center-block" alt="Boekh project">
-                        <span class="project-name">Bokeh</span>
-                        <a class="project-url" href="#">https://github.com/udacity/Bokeh</a>
-                    </div>
+            <h2 class="feature-header row">Featured Work</h2>
+            <div class="row">
+                <!-- Bootstrap classes to show 3 projects per row on large screens, 2 per row on
+                     tablets in portrait mode, defaults to 1 per row on phones -->
+                <div class="project col-sm-6 col-md-4">
+                    <!-- Use srcset to deliver higher resolution images to 2x(retina) devices -->
+                    <img src="images/knit.jpg"
+                         class="img-responsive center-block"
+                         srcset="images/knit.jpg 1x,
+                                 images/knit_2x.jpg 2x"
+                         alt="Appify project">
+                    <div class="project-name">Appify</div>
+                    <a class="project-url" href="#">https://github.com/udacity/Appify</a>
+                </div>
+                <div class="project col-sm-6 col-md-4">
+                    <!-- Use srcset to deliver higher resolution images to 2x(retina) devices -->
+                    <img src="images/rose.jpg"
+                         class="img-responsive center-block"
+                         srcset="images/rose.jpg 1x,
+                                 images/rose_2x.jpg 2x"
+                         alt="Sunflower project">
+                    <div class="project-name">Yellow Rose</div>
+                    <a class="project-url" href="#">https://github.com/udacity/YellowRose</a>
+                </div>
+                <div class="project col-sm-6 col-md-4">
+                    <!-- Use srcset to deliver higher resolution images to 2x(retina) devices -->
+                    <img src="images/artichoke.jpg"
+                         class="img-responsive center-block"
+                         srcset="images/artichoke.jpg 1x,
+                                 images/artichoke_2x.jpg 2x"
+                         alt="Bokeh project">
+                    <div class="project-name">Bokeh</div>
+                    <a class="project-url" href="#">https://github.com/udacity/Bokeh</a>
                 </div>
             </div>
         </section>
-    
+    </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
  

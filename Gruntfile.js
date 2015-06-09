@@ -12,12 +12,23 @@ module.exports = function(grunt) {
     responsive_images: {
       dev: {
         options: {
-          engine: 'im',
+          engine: 'gm',
           sizes: [{
-            width: 1600,
-            suffix: '_large_2x',
-            quality: 30
-          }]
+              width:300,
+              height: 200,
+              quality: 40,
+              aspectRatio: false,
+              upscale:true,
+              rename: false
+          },{
+              width: 600,
+              height: 400,
+              suffix: '_2x',
+              quality: 60,
+              aspectRatio: false,
+              upscale: true,
+              rename: false
+            }]
         },
         files: [{
           expand: true,
@@ -28,34 +39,33 @@ module.exports = function(grunt) {
       }
     },
 
-    /* Clear out the images directory if it exists */
+    /* Clear out the images_src directory if it exists */
     clean: {
       dev: {
-        src: ['images'],
-      },
+        src: ['images']
+      }
     },
 
-    /* Generate the images directory if it is missing */
+    /* Generate the images_src directory if it is missing */
     mkdir: {
       dev: {
         options: {
-          create: ['images']
-        },
-      },
+          create: ['images_src']
+        }
+      }
     },
 
-    /* Copy the "fixed" images that don't go through processing into the images/directory */
+    /* Copy the "fixed" images_src that don't go through processing into the images_src/directory */
     copy: {
       dev: {
         files: [{
           expand: true,
           src: ['images_src/fixed/*.{gif,jpg,png}'],
           dest: 'images/',
-          flatten: true,
+          flatten: true
         }]
-      },
-    },
-
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-responsive-images');
