@@ -1,3 +1,21 @@
-h2 {
-    font-size: 0.8em;
+@charset "UTF-8";
+
+/* For devices with max-width < 640px set the max-width of the container to 95%
+ to maintain some white space on the left and right of the page */
+.container {
+    max-width: 95%;
+}
+
+/* Reduce the size of the font for the heading in the feature section and
+ add some padding to improve the appearance */
+.featured h2 {
+    font-size: large;
+    margin: 10px 0 5px 0;
+}
+
+/* Remove padding and adjust the margins on the project class for a better
+ appearance */
+.project {
+    padding: 0;
+    margin: 0 10px 5px 10px;
 }

@@ -1,48 +1,68 @@
-h1 {
-    text-transform: uppercase;
-    font-weight: 100;
-    font-size: xx-large;
-    text-align: right;
-    margin: 30px 0 5px 0;
-    color: #747704
-}
-
-h3 {
-    text-transform: uppercase;
-    font-weight: 300;
-    font-size: small;
-    text-align: right;
-    color: #747704;
-    margin: 0 0 5px 0;
-}
-
-.top-header {
-    padding: 5px 0 0 0;
-}
-
-.logo .col-xs-3,
-.logo .col-md-6 {
-    padding-left: 0;
-}
-
-.name {
-    padding-right: 0;
-}
-
+/* Header */
 header {
     padding: 5px 0 0 5px;
     border-bottom: 4px solid #BCBBBB;
     margin-bottom: 10px;
 }
 
-.feature-header {
-    font-size: large;
+/* Content */
+
+/* Set the font for the document */
+body {
+    font: 100% "Lato", sans-serif
+}
+
+/* Set the max-width of the page to 960px */
+.container {
+    max-width: 960px;
+}
+
+.top-header {
+    padding: 5px 0 0 0;
+}
+
+/* Remove padding from the grid for the logo to align it to the left */
+.logo .col-xs-3,
+.logo .col-md-6 {
+    padding: 0;
+}
+
+/* Set padding for the name to align it to the right edge of the page */
+.name {
+    padding: 0 0 0 15px;
+}
+
+.name h1 {
+    font-weight: 200;
+    font-size: xx-large;
+    text-align: right;
+    text-transform: uppercase;
+    margin: 20px 0 5px 0;
+    color: #747704
+}
+
+.name h3 {
     font-weight: 300;
-    margin: 10px 0 0 10px;
-    color: #BCBBBB;
+    font-size: small;
+    text-align: right;
+    text-transform: uppercase;
+    color: #747704;
+    margin: 0 0 20px 0;
+}
+
+
+.featured h2 {
+    font-size: x-large;
+    font-weight: 300;
     border-bottom: none;
-    margin-left: 0;
-    padding-left: 0;
+    margin: 5px 0 0 0;
+    padding: 0;
+    color: #BCBBBB;
+}
+
+.project {
+    margin: 0 0 15px 0;
+    padding: 5px 10px 15px 0;
 }
 
 .project-name {
@@ -62,31 +82,8 @@ header {
     padding-bottom: 10px;
 }
 
-.project span {
-    display: block;
-    text-align: center;
+.project img {
+    width: 100%;
+    height: auto;
 }
 
-.container-fluid {
-    max-width: 960px;
-}
-
-.container {
-    max-width: 960px;
-}
-
-
-
-@media only screen and (min-width: 992px) {
-    .project {
-        padding: 10px 10px 15px 0;
-    }
-}
-
-
-
-@media only screen and (max-width: 400px) {
-    .container {
-        max-width: 350px;
-    }
-}
